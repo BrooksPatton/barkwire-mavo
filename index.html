@@ -5,15 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Barkwire Mavo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
-
-  <link rel="stylesheet" type="text/css" media="screen" href="css-for-mavo.css" />
-  <link rel="stylesheet" href="main.css">
-  <script src="https://get.mavo.io/mavo.js"></script>
+  <link rel="stylesheet" href="mavo.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="custom.css">
+  <script src="mavo.js"></script>
 </head>
-<body mv-app="barkwire" mv-storage="local">
-
+<body mv-app="barkwire" mv-source="https://barkwire-api.now.sh/dogs">
   <header>
     <a href="#">
       <h1>Barkwire</h1>
@@ -21,16 +18,16 @@
   </header>
 
   <ul class="dogs">
-    <li mv-multiple id="dogs[id]" property="dogs">
+    <li mv-multiple property="dogs" id="#dogs[id]">
       <a href="#dogs[id]">
         <section class="dog-listing">
-          <h3 class="name" property="name">Dog Name</h3>
+          <h3 class="name" property="name">Dog name</h3>
           <section>
             <figure>
-              <img src=[imageUrl] alt=[name] />
-              <figcaption property="imageCaption">An Awesome Dog</figcaption>
+              <img src="[imageUrl]" alt="[name]">
+              <figcaption>[imageCaption]</figcaption>
             </figure>
-            <p property="description">I am a great dog</p>
+            <p property="description">Dog description</p>
           </section>
         </section>
       </a>
